@@ -131,7 +131,7 @@ body {
 
 #range::-webkit-slider-thumb {
   appearance: none;
-  width: 1.25rem;
+  width: 1.5rem;
   aspect-ratio: 1/1;
   background-color: hsl(206, 92%, 46%);
   border-radius: 50%;
