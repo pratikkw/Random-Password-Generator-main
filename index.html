@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main grid">
+      <div class="display_password">
+        <input type="text" class="display_pass_field" placeholder="Password" />
+      </div>
+
+      <div class="len_password grid">
+        <p>Password Length:</p>
+        <div class="range_box flex">
+          <div class="sub-range_box">
+            <input type="range" id="range" min="4" max="16" value="8" />
+            <div class="progressbar"></div>
+          </div>
+          <p class="current_len">8</p>
+        </div>
+      </div>
+
+      <ul class="options grid">
+        <!-- Option 1 -->
+        <li class="option flex">
+          <h2 class="secondary-title">Uppercase</h2>
+
+          <div class="toggle_btn flex">
+            <input
+              type="checkbox"
+              data-passtype="Uppercase"
+              class="check"
+              id="check--1"
+            />
+            <label class="btn" for="check--1"></label>
+          </div>
+        </li>
+
+        <!-- Option 2 -->
+        <li class="option flex">
+          <h2 class="secondary-title">Lowercase</h2>
+
+          <div class="toggle_btn flex">
+            <input
+              type="checkbox"
+              data-passtype="Lowercase"
+              class="check"
+              id="check--2"
+            />
+            <label class="btn" for="check--2"></label>
+          </div>
+        </li>
+
+        <!-- Option 3 -->
+        <li class="option flex">
+          <h2 class="secondary-title">Numbers</h2>
+
+          <div class="toggle_btn flex">
+            <input
+              type="checkbox"
+              data-passtype="Numbers"
+              class="check"
+              id="check--3"
+            />
+            <label class="btn" for="check--3"></label>
+          </div>
+        </li>
+
+        <!-- Option 4 -->
+        <li class="option flex">
+          <h2 class="secondary-title">Symbols</h2>
+
+          <div class="toggle_btn flex">
+            <input
+              type="checkbox"
+              data-passtype="Symbols"
+              class="check"
+              id="check--4"
+            />
+            <label class="btn" for="check--4"></label>
+          </div>
+        </li>
+      </ul>
+
+      <button class="gen_btn flex">
+        <img
+          src="generate.png"
+          class="light_img"
+          alt="A white color lightening icon"
+        />
+        Generate Password
+      </button>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

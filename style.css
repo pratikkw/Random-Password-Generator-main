@@ -1,0 +1,238 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bk-clr: hsl(212, 29%, 19%);
+  --application-bk-clr: hsl(205, 81%, 21%);
+  --generate-btn-clr: hsl(152, 99%, 31%);
+
+  --white-clr: hsl(0, 0%, 100%);
+  --black-clr: hsl(0, 0%, 0%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+label {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  isolation: isolate;
+  background-color: var(--main-bk-clr);
+  color: var(--white-clr);
+
+  font-family: "Roboto", sans-serif;
+}
+
+/* Utilities Class */
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* -------------------- */
+
+.main {
+  background-color: var(--application-bk-clr);
+  padding: 2rem 1rem 1.75rem 1rem;
+  border-radius: 0.5rem;
+  gap: 1.5rem;
+}
+
+/* Display Password */
+.display_pass_field {
+  width: 100%;
+  border-radius: 100px;
+
+  font-size: 1.25rem;
+  color: var(--black-clr);
+  padding: 0.65rem 1.25rem;
+}
+
+.display_pass_field::placeholder {
+  font-size: 1.25rem;
+}
+
+/* ----------------------------- */
+
+/* Length of Password */
+.len_password {
+  gap: 10px;
+  margin-inline: 1.25rem;
+}
+
+.range_box {
+  align-items: center;
+}
+
+.sub-range_box {
+  flex: 1;
+  position: relative;
+}
+
+#range {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 10px;
+  appearance: none;
+  border-radius: 100px;
+}
+
+#range::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.25rem;
+  aspect-ratio: 1/1;
+  background-color: hsl(206, 92%, 46%);
+  border-radius: 50%;
+  z-index: 99;
+  position: relative;
+}
+
+.progressbar {
+  position: absolute;
+  background-color: #1dd1a1;
+  height: 10px;
+  border-radius: 100px;
+  top: 0;
+  width: 50%;
+}
+
+.current_len {
+  font-size: 1.5rem;
+}
+/* ----------------------------- */
+
+/* Options */
+.options {
+  margin-inline: 1.25rem;
+}
+
+.secondary-title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.option {
+  justify-content: space-between;
+}
+
+.toggle_btn {
+  align-items: center;
+  gap: 0;
+}
+
+.check {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/0.5;
+  border-radius: 100px;
+  background-color: hsl(152, 99%, 31%);
+  transition: background 0.5s;
+
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  width: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-inline: 3px;
+  background-color: var(--white-clr);
+
+  position: absolute;
+  top: 50%;
+  transform: translate(115%, -50%);
+  transition: transform 0.5s;
+}
+
+.check:checked + .btn {
+  background-color: hsl(39, 97%, 71%);
+}
+
+.check:checked + .btn::after {
+  transform: translate(0%, -50%);
+  transition: transform 0.5s;
+}
+/* ----------------------------- */
+
+/* Generate Button */
+.gen_btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: var(--generate-btn-clr);
+  border-radius: 100px;
+  padding: 0.75rem 1.5rem;
+
+  font-size: 1.25rem;
+  color: var(--white-clr);
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+
+  margin-inline: 1.25rem;
+}
+
+.light_img {
+  width: 1.25rem;
+  aspect-ratio: 1/1.5;
+}
+/* ----------------------------- */
+
+@media only screen and (min-width: 450px) {
+  .main {
+    width: 450px;
+  }
+
+  .main {
+    gap: 2rem;
+  }
+
+  .options {
+    gap: 1.5rem;
+  }
+
+  .secondary-title {
+    font-size: 1.25rem;
+  }
+}
