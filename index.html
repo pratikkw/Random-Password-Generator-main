@@ -22,14 +22,21 @@
   </head>
   <body>
     <main class="main grid">
+      <!-- Display Password -->
       <div class="display_password flex">
-        <input type="text" class="display_pass_field" placeholder="Password" />
+        <input
+          type="text"
+          readonly
+          class="display_pass_field"
+          placeholder="Password"
+        />
 
         <div class="icons">
           <i class="lar la-copy icon copy-icon"></i>
         </div>
       </div>
 
+      <!-- Select Password Length -->
       <div class="len_password grid">
         <p>Password Length:</p>
         <div class="range_box flex">
@@ -41,7 +48,9 @@
         </div>
       </div>
 
+      <!-- Options -->
       <ul class="options grid">
+        <!-- Option 1 -->
         <li class="option flex">
           <h2 class="secondary-title">Show/Hide</h2>
 
@@ -50,7 +59,7 @@
           </div>
         </li>
 
-        <!-- Option 1 -->
+        <!-- Option 2 -->
         <li class="option flex">
           <h2 class="secondary-title">Uppercase</h2>
 
@@ -65,7 +74,7 @@
           </div>
         </li>
 
-        <!-- Option 2 -->
+        <!-- Option 3 -->
         <li class="option flex">
           <h2 class="secondary-title">Lowercase</h2>
 
@@ -80,7 +89,7 @@
           </div>
         </li>
 
-        <!-- Option 3 -->
+        <!-- Option 4 -->
         <li class="option flex">
           <h2 class="secondary-title">Numbers</h2>
 
@@ -95,7 +104,7 @@
           </div>
         </li>
 
-        <!-- Option 4 -->
+        <!-- Option 5 -->
         <li class="option flex">
           <h2 class="secondary-title">Symbols</h2>
 
@@ -111,6 +120,7 @@
         </li>
       </ul>
 
+      <!-- Generate Button -->
       <button class="gen_btn flex">
         <img
           src="generate.png"
