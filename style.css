@@ -43,7 +43,7 @@ a {
 body {
   min-height: 100vh;
   display: grid;
-  place-content: center;
+  place-items: start center;
   isolation: isolate;
   background-color: var(--main-bk-clr);
   color: var(--white-clr);
@@ -69,9 +69,10 @@ body {
   background-color: var(--application-bk-clr);
   padding: 2rem 1rem 1.75rem 1rem;
   border-radius: 0.5rem;
-  gap: 1.75rem;
+  gap: 2rem;
 
   margin-inline: 1rem;
+  margin-top: 4rem;
 }
 
 /* Display Password */
@@ -141,7 +142,7 @@ body {
 /* Options */
 .options {
   margin-inline: 1.25rem;
-  gap: 1.25rem;
+  gap: 1.75rem;
 }
 
 .secondary-title {
