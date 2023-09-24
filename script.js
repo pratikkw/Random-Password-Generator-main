@@ -6,6 +6,8 @@ const progressBar = document.querySelector(".progressbar");
 const currentLen = document.querySelector(".current_len");
 const generateBtn = document.querySelector(".gen_btn");
 const option = document.querySelectorAll(".check");
+const copyPassword = document.querySelector(".copy-icon");
+const eyeOpen = document.querySelector(".eye-icon");
 const clickySound = new Audio("toggle-btn.mp3");
 
 // Our Variables:-
@@ -74,4 +76,23 @@ generateBtn.addEventListener("click", function () {
   mixVari = [...upperCase, ...lowerCase, ...numbers, ...symbols];
   let storePass = generatePass(+slider.value, mixVari);
   displayPass.value = storePass;
+});
+
+// Copy Password:-
+copyPassword.addEventListener("click", function () {
+  displayPass.select();
+  displayPass.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(displayPass.value);
+});
+
+// Show/Hide Password:-
+eyeOpen.addEventListener("click", function () {
+  if (displayPass.type === "text") {
+    displayPass.type = "password";
+    eyeOpen.src = "eye-close.png";
+  } else {
+    displayPass.type = "text";
+    eyeOpen.src = "eye-open.png";
+  }
 });

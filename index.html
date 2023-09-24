@@ -13,11 +13,21 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
   </head>
   <body>
     <main class="main grid">
-      <div class="display_password">
+      <div class="display_password flex">
         <input type="text" class="display_pass_field" placeholder="Password" />
+
+        <div class="icons">
+          <i class="lar la-copy icon copy-icon"></i>
+        </div>
       </div>
 
       <div class="len_password grid">
@@ -32,6 +42,14 @@
       </div>
 
       <ul class="options grid">
+        <li class="option flex">
+          <h2 class="secondary-title">Show/Hide</h2>
+
+          <div class="flex">
+            <img src="eye-open.png" class="eye-icon" alt="eye" />
+          </div>
+        </li>
+
         <!-- Option 1 -->
         <li class="option flex">
           <h2 class="secondary-title">Uppercase</h2>

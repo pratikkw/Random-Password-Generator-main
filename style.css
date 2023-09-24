@@ -72,21 +72,35 @@ body {
   gap: 2.5rem;
 
   margin-inline: 1rem;
-  margin-top: 4rem;
+  margin-top: 1.5rem;
 }
 
 /* Display Password */
+.display_password {
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--white-clr);
+  border-radius: 100px;
+  padding: 0.5rem 0.75rem;
+}
+
 .display_pass_field {
   width: 100%;
-  border-radius: 100px;
 
   font-size: 1.25rem;
   color: var(--black-clr);
-  padding: 0.65rem 1.25rem;
+  padding: 0.25rem 0.75rem;
 }
 
 .display_pass_field::placeholder {
   font-size: 1.25rem;
+}
+
+.icon {
+  font-size: 1.75rem;
+  color: var(--black-clr);
 }
 
 /* ----------------------------- */
@@ -150,8 +164,14 @@ body {
   font-weight: 400;
 }
 
+.eye-icon {
+  width: 2.8125rem;
+  height: 1.75rem;
+}
+
 .option {
   justify-content: space-between;
+  align-items: center;
 }
 
 .toggle_btn {
@@ -229,11 +249,11 @@ body {
   }
 
   .main {
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .options {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .secondary-title {
