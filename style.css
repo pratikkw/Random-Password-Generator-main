@@ -69,7 +69,9 @@ body {
   background-color: var(--application-bk-clr);
   padding: 2rem 1rem 1.75rem 1rem;
   border-radius: 0.5rem;
-  gap: 1.5rem;
+  gap: 1.75rem;
+
+  margin-inline: 1rem;
 }
 
 /* Display Password */
@@ -139,10 +141,11 @@ body {
 /* Options */
 .options {
   margin-inline: 1.25rem;
+  gap: 1.25rem;
 }
 
 .secondary-title {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 
